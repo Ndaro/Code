@@ -1,0 +1,80 @@
+<mat-toolbar class="example-header">
+
+  <mat-icon>menu</mat-icon>
+
+  <span>Add Employee Page</span>
+  <span class="spacer"></span>
+  <button mat-button>Admin</button>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [position]="'start'" opened class="sidenav-left"
+               [fixedInViewport]="true" [fixedTopGap]="60"
+               [fixedBottomGap]="0"></mat-sidenav>
+
+  <mat-nav-list>
+
+  </mat-nav-list>
+
+  <mat-sidenav #sidenav mode="side" [position]="'end'" class="example-sidenav"
+               [fixedInViewport]="true" [fixedTopGap]="60"
+               [fixedBottomGap]="0"></mat-sidenav>
+
+  <mat-sidenav-content style="padding: 20px; background-color: #ccc;"></mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+<table>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>BirtDate</mat-label>
+    <textarea matInput placeholder="Date"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label></mat-label>
+    <textarea matInput placeholder="Month"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label></mat-label>
+    <textarea matInput placeholder="Year"></textarea>
+  </mat-form-field>
+
+</table>
+
+<tr>
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </td>
+</tr>
+
+<table class="example-full-width" cellspacing="0">
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>basicSalary</mat-label>
+        <input matInput placeholder="Rp. xx.xxx.xxx.xx">
+      </mat-form-field>
+    </td>
+</table>
+
+<label for="cars">Group : </label>
+<select id="cars" name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+  <option value="mercy">Mercy</option>
+  <option value="honda">Honda</option>
+  <option value="toyota">Toyota</option>
+  <option value="suzuki">Suzuki</option>
+  <option value="renault">Renault</option>
+  <option value="kawasaki">Kawasaki</option>
+</select>
+
+<a mat-raised-button>Save</a>
+<a mat-raised-button routerLink="/admin">Cancel</a>
+
+<router-outlet></router-outlet>

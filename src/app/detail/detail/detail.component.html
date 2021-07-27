@@ -1,0 +1,124 @@
+<ng-container>
+  <mat-toolbar class="example-header">
+
+    <mat-icon>menu</mat-icon>
+
+    <span>Employee Detail Page</span>
+    <span class="spacer"></span>
+    <button mat-button>Admin</button>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [position]="'start'" opened class="sidenav-left"
+                 [fixedInViewport]="true" [fixedTopGap]="60"
+                 [fixedBottomGap]="0"></mat-sidenav>
+
+    <mat-sidenav #sidenav mode="side" [position]="'end'" class="example-sidenav"
+                 [fixedInViewport]="true" [fixedTopGap]="60"
+                 [fixedBottomGap]="0"></mat-sidenav>
+
+    <mat-sidenav-content style="padding: 20px; background-color: #ccc;"></mat-sidenav-content>
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</ng-container>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label contenteditable="true">LIST PAGE</mat-label>
+    <input matInput disabled value="">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>username</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>firstName</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>lastName</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </td>
+
+    </tr>
+  </table>
+
+
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Status</mat-label>
+          <input matInput placeholder="">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Group</mat-label>
+          <input matInput placeholder="">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput #postalCode maxlength="5" placeholder="DateTime" value="">
+          <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<table>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>BirtDate</mat-label>
+    <textarea matInput placeholder="Date"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label></mat-label>
+    <textarea matInput placeholder="Month"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label></mat-label>
+    <textarea matInput placeholder="Year"></textarea>
+  </mat-form-field>
+
+</table>
+
+<tr>
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </td>
+</tr>
+
+<table class="example-full-width" cellspacing="0">
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>basicSalary</mat-label>
+        <input matInput placeholder="Rp. xx.xxx.xxx.xx">
+      </mat-form-field>
+    </td>
+</table>
+
+
+
+<a mat-raised-button routerLink="/admin">OK</a>
+<router-outlet></router-outlet>
